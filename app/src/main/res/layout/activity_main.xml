@@ -32,7 +32,7 @@
         android:id="@+id/iv_main_logo"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:contentDescription="app_logo"
+        android:contentDescription="@string/iv_main_logo_des"
         android:src="@drawable/ic_action_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
