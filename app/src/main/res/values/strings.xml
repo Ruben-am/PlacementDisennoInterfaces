@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Placement</string>
+    <string name="tv_main_welcome">Bienvenido</string>
+    <string name="et_main_name">Nombre</string>
+    <string name="et_main_password">Contraseña</string>
+    <string name="btn_main_login">Login</string>
+    <string name="btn_main_singup">Sign Up</string>
 </resources>
