@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -28,10 +29,18 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gd_main_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
     <ImageView
-        android:id="@+id/isotipo"
+        android:id="@+id/iv_main_logo"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:contentDescription="@string/iv_main_logo_des"
         android:src="@drawable/ic_action_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,55 +49,69 @@
     </ImageView>
 
     <TextView
-        android:id="@+id/texto"
+        android:id="@+id/tv_main_welcome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Bienvenido"
+        android:text="@string/tv_main_welcome"
         android:textAlignment="center"
+        android:textColor="@color/title_text"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="@id/gd_main_end"
         app:layout_constraintStart_toStartOf="@+id/gd_main_start"
-        app:layout_constraintTop_toBottomOf="@id/isotipo" />
+        app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/input1"
+        android:id="@+id/et_main_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Nombre"
+        android:hint="@string/et_main_name"
         app:layout_constraintEnd_toEndOf="@id/gd_main_end"
         app:layout_constraintStart_toStartOf="@+id/gd_main_start"
-        app:layout_constraintTop_toBottomOf="@id/texto" />
+        app:layout_constraintTop_toBottomOf="@id/tv_main_welcome" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/input2"
+        android:id="@+id/et_main_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Password"
+        android:hint="@string/et_main_password"
         app:layout_constraintEnd_toEndOf="@id/gd_main_end"
         app:layout_constraintStart_toStartOf="@+id/gd_main_start"
-        app:layout_constraintTop_toBottomOf="@id/input1" />
+        app:layout_constraintTop_toBottomOf="@id/et_main_name" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/boton1"
-        style="@style/Widget.MaterialComponents.Button"
+        android:id="@+id/btn_main_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Login"
-        app:layout_constraintEnd_toEndOf="@id/gd_main_end"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/background_button"
+        android:text="@string/btn_main_login"
+        app:layout_constraintEnd_toStartOf="@id/btn_main_singup"
         app:layout_constraintStart_toStartOf="@+id/gd_main_start"
-        app:layout_constraintTop_toBottomOf="@id/input2" />
+        app:layout_constraintTop_toBottomOf="@id/et_main_password" />
 
     <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/btn_main_singup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:text="Sign Up"
+        android:backgroundTint="@color/background_button"
+        android:text="@string/btn_main_singup"
         app:layout_constraintEnd_toEndOf="@id/gd_main_end"
-        app:layout_constraintStart_toStartOf="@+id/gd_main_start"
-        app:layout_constraintTop_toBottomOf="@id/boton1" />
+        app:layout_constraintStart_toEndOf="@+id/btn_main_login"
+        app:layout_constraintTop_toBottomOf="@id/et_main_password" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_main_forgottenpassword"
+        android:textAlignment="center"
+        android:textColor="@color/highlighted_color"
+        app:layout_constraintBottom_toBottomOf="@id/gd_main_bottom"
+        app:layout_constraintEnd_toEndOf="@id/gd_main_end"
+        app:layout_constraintStart_toStartOf="@id/gd_main_start" />
 </androidx.constraintlayout.widget.ConstraintLayout>
