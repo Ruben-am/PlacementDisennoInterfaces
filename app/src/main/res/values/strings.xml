@@ -7,4 +7,9 @@
     <string name="btn_main_singup">Sign Up</string>
     <string name="iv_main_logo_des">app logo</string>
     <string name="tv_main_forgottenpassword">¿Has olvidado tu contraseña?</string>
+    <string name="tv_forgotpassword_welcome">Recuperar contraseña</string>
+    <string name="et_forgotpassword_newpassword">Nueva contraseña</string>
+    <string name="et_forgotpassword_newpassword2">Repetir nueva contraseña</string>
+    <string name="btn_forgotpassword_login">Cambiar contraseña</string>
+    <string name="tv_start_welcome">Bienvenido a mi app</string>
 </resources>
